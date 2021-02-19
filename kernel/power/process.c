@@ -143,7 +143,7 @@ int freeze_processes(void)
 	if (!pm_freezing)
 		atomic_inc(&system_freezing_cnt);
 
-	pm_wakeup_clear();
+	pm_wakeup_clear(true);
 #ifndef CONFIG_SUSPEND_SKIP_SYNC
 	pr_debug("Freezing user space processes ... ");
 #endif
